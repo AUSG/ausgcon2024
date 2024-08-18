@@ -1,9 +1,11 @@
-import Spline from "@splinetool/react-spline/next";
+import Background from "./components/Background";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <main className="h-screen">
-      <Spline scene="https://prod.spline.design/y3eKWYgU8LAe4zuH/scene.splinecode" />
+    <main>
+      <HeroSection />
+      <Background />
     </main>
   );
 }
