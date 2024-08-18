@@ -17,7 +17,7 @@ const container: Variants = {
 
 export default function SessionSection() {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
   return (
