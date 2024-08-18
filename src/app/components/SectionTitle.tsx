@@ -1,0 +1,29 @@
+import FadeIn from "./FadeIn";
+
+interface SectionTitleProps {
+  title: string;
+  description?: string;
+}
+
+export default function SectionTitle({
+  title,
+  description,
+}: SectionTitleProps) {
+  return (
+    <div>
+      <FadeIn
+        className="text-center text-lg text-white md:text-2xl"
+        distance={30}
+      >
+        {title}
+      </FadeIn>
+      {description && (
+        <FadeIn className="description" distance={30}>
+          <p className="mt-7 max-w-3xl whitespace-pre-wrap text-wrap text-center text-xl font-semibold text-white md:text-5xl">
+            {description}
+          </p>
+        </FadeIn>
+      )}
+    </div>
+  );
+}
