@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const suit = localFont({
-  src: "./fonts/SUIT-Variable.woff2",
+const dunggeunmo = localFont({
+  src: "./fonts/DungGeunMo.woff2",
   display: "swap",
   weight: "45 920",
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={suit.className}>{children}</body>
+      <body className={dunggeunmo.className}>{children}</body>
     </html>
   );
 }
