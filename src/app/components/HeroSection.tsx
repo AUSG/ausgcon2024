@@ -19,7 +19,7 @@ export default function HeroSection() {
 
   return (
     <motion.section
-      className="h-screen-dvh relative"
+      className="relative h-screen-dvh"
       ref={heroRef}
       animate={heroInView && mounted ? "visible" : "hidden"}
       variants={{
@@ -33,15 +33,21 @@ export default function HeroSection() {
     >
       <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-12">
         <FadeIn
-          className="text-primary whitespace-pre-wrap text-center text-2xl font-semibold md:text-6xl"
-          distance={60}
+          className="whitespace-pre-wrap text-center text-2xl font-semibold text-primary md:text-6xl"
+          distance={30}
           duration={{ in: 0.8 }}
         >
-          {"AUSGCON 2024\n: Try-Catch"}
+          {"AUSG\nConference 2024"}
+        </FadeIn>
+        <FadeIn distance={60} duration={{ in: 0.8 }}>
+          <div className="flex justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:text-2xl">
+            <span>2024.09.21</span>
+            <span>AWS 센터필드 18층</span>
+          </div>
         </FadeIn>
         <FadeIn
           className="w-full text-center"
-          distance={60}
+          distance={80}
           duration={{ in: 0.8 }}
         >
           <Button className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 data-[hover]:bg-gray-600">
