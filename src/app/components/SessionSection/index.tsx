@@ -26,7 +26,7 @@ export default function SessionSection() {
       animate={inView ? "visible" : "hidden"}
       variants={container}
     >
-      <div className="container m-auto flex flex-col items-center">
+      <div className="container m-auto flex flex-col items-center px-5 pb-16">
         <SectionTitle
           title="Program"
           description={`AUSGCON의 세션을 \n소개합니다`}
