@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@headlessui/react";
+import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import FadeIn from "./FadeIn";
@@ -41,8 +42,14 @@ export default function HeroSection() {
         </FadeIn>
         <FadeIn distance={60} duration={{ in: 0.8 }}>
           <div className="flex justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:text-2xl">
-            <span>2024.09.21</span>
-            <span>AWS 센터필드 18층</span>
+            <span className="flex items-center gap-2">
+              <CalendarIcon className="h-6 w-6" />
+              2024.09.21
+            </span>
+            <span className="flex items-center gap-2">
+              <MapPinIcon className="h-6 w-6" />
+              AWS 센터필드 18층
+            </span>
           </div>
         </FadeIn>
         <FadeIn
