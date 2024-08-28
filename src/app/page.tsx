@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <Backdrop />
-      <SessionSection />
+      <Backdrop>
+        <SessionSection />
+      </Backdrop>
       <Background />
     </main>
   );

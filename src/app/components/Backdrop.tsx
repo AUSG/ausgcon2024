@@ -3,10 +3,9 @@
 import { cn } from "@/app/lib/utils";
 import { useInView } from "react-intersection-observer";
 
-export default function Backdrop() {
+export default function Backdrop({ children }: { children: React.ReactNode }) {
   const { ref, inView } = useInView({
     threshold: 1,
-    triggerOnce: true,
   });
 
   return (
@@ -17,7 +16,7 @@ export default function Backdrop() {
           inView ? "bg-slate-500/60" : "bg-gray-400/0"
         )}
       />
-      <div ref={ref} className="h-10" />
+      <div ref={ref}>{children}</div>
     </>
   );
 }
