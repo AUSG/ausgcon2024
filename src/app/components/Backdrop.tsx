@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 export default function Backdrop() {
   const { ref, inView } = useInView({
     threshold: 1,
+    triggerOnce: true,
   });
 
   return (
