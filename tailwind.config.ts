@@ -15,7 +15,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "#F4862C",
+        primary: "#E03312",
       },
       backgroundColor: {
         scene: "#CDF6FF",
