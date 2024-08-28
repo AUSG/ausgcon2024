@@ -14,7 +14,7 @@ export default function SectionList() {
     useState<(typeof sessionList)[number]["sessions"][number]>();
 
   return (
-    <FadeIn className="flex h-screen w-full justify-center px-4 pt-10">
+    <FadeIn className="flex w-full justify-center px-4 pt-10">
       <div className="w-full max-w-md">
         <TabGroup>
           <TabList className="flex justify-center gap-4">
