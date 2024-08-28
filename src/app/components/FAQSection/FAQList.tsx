@@ -11,7 +11,7 @@ import FadeIn from "../FadeIn";
 export default function FAQList() {
   return (
     <FadeIn className="flex w-full justify-center px-4 pt-10">
-      <div className="w-full max-w-md divide-y divide-white/5 rounded-xl bg-white/5">
+      <div className="w-full max-w-md divide-y divide-white/5 rounded-xl bg-white/20">
         <Disclosure as="div" className="p-6" defaultOpen={true}>
           <DisclosureButton className="group flex w-full items-center justify-between">
             <span className="text-sm/6 font-medium text-white group-data-[hover]:text-white/80">
