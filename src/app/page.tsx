@@ -9,8 +9,8 @@ export default function Home() {
       <HeroSection />
       <Backdrop>
         <SessionSection />
+        <Background />
       </Backdrop>
-      <Background />
     </main>
   );
 }
