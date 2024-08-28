@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Backdrop({ children }: { children: React.ReactNode }) {
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.1,
   });
 
   return (
@@ -16,7 +16,9 @@ export default function Backdrop({ children }: { children: React.ReactNode }) {
           inView ? "bg-slate-500/60" : "bg-gray-400/0"
         )}
       />
-      <div ref={ref}>{children}</div>
+      <div ref={ref} className="min-h-full">
+        {children}
+      </div>
     </>
   );
 }
