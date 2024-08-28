@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Button } from "@headlessui/react";
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
@@ -38,10 +39,12 @@ export default function HeroSection() {
           distance={30}
           duration={{ in: 0.8 }}
         >
-          {"AUSG\nConference 2024"}
+          <div className="relative aspect-[3/1] w-56 md:w-96">
+            <Image src="/logo.png" alt="AUSG Conference 2024" fill />
+          </div>
         </FadeIn>
         <FadeIn distance={60} duration={{ in: 0.8 }}>
-          <div className="flex justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:text-2xl">
+          <div className="font-bagel-fat-one flex justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:text-2xl">
             <span className="flex items-center gap-2">
               <CalendarIcon className="h-6 w-6" />
               2024.09.21
