@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-bagel-fat-one {
+  font-family: var(--font-bagel-fat-one);
+}

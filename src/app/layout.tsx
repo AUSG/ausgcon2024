@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Bagel_Fat_One } from "next/font/google";
+
+const bagelFatOne = Bagel_Fat_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bagel-fat-one",
+});
 
 const dunggeunmo = localFont({
   src: "./fonts/DungGeunMo.woff2",
@@ -20,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={dunggeunmo.className}>{children}</body>
+      <body className={`${bagelFatOne.variable} ${dunggeunmo.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
