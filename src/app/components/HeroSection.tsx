@@ -51,7 +51,7 @@ export default function HeroSection() {
             </span>
             <span className="flex items-center gap-2">
               <MapPinIcon className="h-6 w-6 shrink-0" />
-              AWS 센터필드 18층
+              센터필드 EAST 18층
             </span>
           </div>
         </FadeIn>
