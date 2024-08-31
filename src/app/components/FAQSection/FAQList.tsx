@@ -21,7 +21,7 @@ export default function FAQList() {
             className="p-6"
           >
             <DisclosureButton className="group flex w-full items-center justify-between">
-              <span className="text-sm/6 font-medium text-white group-data-[hover]:text-white/80">
+              <span className="text-left text-sm/6 font-medium text-white group-data-[hover]:text-white/80">
                 {faq.question}
               </span>
               <ChevronDownIcon className="size-5 fill-white/60 group-data-[open]:rotate-180 group-data-[hover]:fill-white/50" />
