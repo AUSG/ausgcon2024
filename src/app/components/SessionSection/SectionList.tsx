@@ -15,7 +15,19 @@ export default function SectionList() {
 
   return (
     <FadeIn className="flex w-full justify-center px-4 pt-10">
-      <div className="w-full max-w-md">
+      <div className="flex w-full flex-col gap-2">
+        <span className="flex w-full items-center justify-center gap-1">
+          <Image
+            className="aspect-square shrink-0"
+            src="/session/ausg_badge.png"
+            alt="ausg"
+            width={16}
+            height={16}
+          />
+          <span className="text-sm/6 text-white/70 tablet:text-base">
+            세션은 AUSG 멤버의 세션입니다.
+          </span>
+        </span>
         <TabGroup>
           <TabList className="flex justify-center gap-4">
             {sessionList.map(({ track }) => (
@@ -36,36 +48,47 @@ export default function SectionList() {
                 <div>
                   {sessions.map((session) => (
                     <div key={session.order}>
-                      <span className="flex items-center gap-1 text-xl text-white">
-                        <ClockIcon className="size-4" />
+                      <span className="font-bagel-fat-one flex items-center gap-1 text-lg text-white/90 tablet:text-xl">
+                        <ClockIcon className="size-4 shrink-0 tablet:size-5" />
                         {sessionTimeLabelLookup[session.order]}
                       </span>
                       <div
-                        className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5"
+                        className="relative rounded-md p-3 transition hover:bg-white/5"
                         onClick={() => {
                           setSelectedSession(session);
                           setIsSessionDialogOpen(true);
                         }}
                       >
-                        <span className="font-semibold text-white">
+                        <span className="flex items-center gap-1 text-xl font-semibold text-white tablet:text-2xl">
+                          {session.speaker?.AUSG && (
+                            <Image
+                              className="aspect-square shrink-0"
+                              src="/session/ausg_badge.png"
+                              alt="ausg"
+                              width={16}
+                              height={16}
+                            />
+                          )}
                           {session.title}
                         </span>
-                        <ul
-                          className="flex gap-2 text-white/50"
-                          aria-hidden="true"
-                        >
-                          <Image
-                            className="rounded-full"
-                            src={session.speakerImage}
-                            alt={session.speaker}
-                            width={24}
-                            height={24}
-                          />
-                          <span>{session.speaker}</span>
-                          <span aria-hidden="true">&middot;</span>
-                          <span>{session.speakerDescription}</span>
-                        </ul>
+                        {session.speaker && (
+                          <div className="flex gap-2" aria-hidden="true">
+                            <div className="relative size-6 shrink-0">
+                              <Image
+                                className="aspect-square shrink-0 rounded-full"
+                                src={session.speaker.image}
+                                alt={session.speaker.name}
+                                fill
+                              />
+                            </div>
+                            <span className="line-clamp-1 flex items-center gap-1 text-sm/6 text-white/70">
+                              {session.speaker.name} &middot;{" "}
+                              {session.speaker.title}
+                            </span>
+                          </div>
+                        )}
                       </div>
+                      <div className="my-2 h-px bg-white/20" />
                     </div>
                   ))}
                   <SessionDialog
