@@ -12,14 +12,14 @@ export default function SectionTitle({
   return (
     <div>
       <FadeIn
-        className="text-center text-lg text-white md:text-2xl"
+        className="text-center text-lg text-white tablet:text-2xl"
         distance={30}
       >
         {title}
       </FadeIn>
       {description && (
         <FadeIn className="description" distance={30}>
-          <p className="mt-7 max-w-3xl whitespace-pre-wrap text-wrap text-center text-xl font-semibold text-white md:text-5xl">
+          <p className="mt-7 max-w-3xl whitespace-pre-wrap text-wrap text-center text-xl font-semibold text-white tablet:text-5xl">
             {description}
           </p>
         </FadeIn>

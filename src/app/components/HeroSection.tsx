@@ -35,16 +35,16 @@ export default function HeroSection() {
     >
       <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-12">
         <FadeIn
-          className="whitespace-pre-wrap text-center text-2xl font-semibold text-primary md:text-6xl"
+          className="whitespace-pre-wrap text-center text-2xl font-semibold text-primary tablet:text-6xl"
           distance={30}
           duration={{ in: 0.8 }}
         >
-          <div className="relative aspect-[7/1] w-80 md:w-[40rem]">
+          <div className="relative aspect-[7/1] w-80 tablet:w-[40rem]">
             <Image src="/logo.png" alt="AUSG Conference 2024" fill />
           </div>
         </FadeIn>
         <FadeIn distance={60} duration={{ in: 0.8 }}>
-          <div className="font-bagel-fat-one flex flex-col items-center justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:flex-row md:text-xl">
+          <div className="font-bagel-fat-one flex flex-col items-center justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary tablet:flex-row tablet:text-xl">
             <span className="flex items-center gap-2">
               <CalendarIcon className="h-6 w-6 shrink-0" />
               2024.09.21

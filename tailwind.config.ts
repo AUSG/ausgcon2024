@@ -14,6 +14,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        tablet: "768px",
+      },
       colors: {
         primary: "#E03312",
       },
