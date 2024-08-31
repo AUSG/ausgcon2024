@@ -4,6 +4,7 @@ import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import SessionSection from "./components/SessionSection";
+import SponsorSection from "./components/SponsorSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <Backdrop>
         <SessionSection />
+        <SponsorSection />
         <FAQSection />
         <Background />
         <Footer />
