@@ -39,7 +39,7 @@ export default function HeroSection() {
           distance={30}
           duration={{ in: 0.8 }}
         >
-          <div className="relative aspect-[3/1] w-56 md:w-96">
+          <div className="relative aspect-[7/1] w-80 md:w-[40rem]">
             <Image src="/logo.png" alt="AUSG Conference 2024" fill />
           </div>
         </FadeIn>
