@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex items-center">
           <Image src="/short_logo.png" alt="Logo" width={100} height={100} />
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center text-xs text-white/70 sm:text-sm">
           <p>@ AUSG {new Date().getFullYear()} All right reserved</p>
         </div>
       </div>
