@@ -44,13 +44,13 @@ export default function HeroSection() {
           </div>
         </FadeIn>
         <FadeIn distance={60} duration={{ in: 0.8 }}>
-          <div className="font-bagel-fat-one flex justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:text-2xl">
+          <div className="font-bagel-fat-one flex flex-col items-center justify-center gap-8 whitespace-pre-wrap text-lg font-semibold text-primary md:flex-row md:text-xl">
             <span className="flex items-center gap-2">
-              <CalendarIcon className="h-6 w-6" />
+              <CalendarIcon className="h-6 w-6 shrink-0" />
               2024.09.21
             </span>
             <span className="flex items-center gap-2">
-              <MapPinIcon className="h-6 w-6" />
+              <MapPinIcon className="h-6 w-6 shrink-0" />
               AWS 센터필드 18층
             </span>
           </div>
@@ -60,8 +60,8 @@ export default function HeroSection() {
           distance={80}
           duration={{ in: 0.8 }}
         >
-          <Button className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 data-[hover]:bg-gray-600">
-            티켓 구매
+          <Button className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-6 py-3 text-xl/6 font-semibold text-white shadow-inner shadow-white/10 data-[hover]:bg-gray-600">
+            참가하기
           </Button>
         </FadeIn>
       </div>
