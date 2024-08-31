@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Bagel_Fat_One } from "next/font/google";
+import Script from "next/script";
+
+export const API = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAOJSKEY}&libraries=services,clusterer&autoload=false`;
 
 const bagelFatOne = Bagel_Fat_One({
   subsets: ["latin"],
@@ -28,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bagelFatOne.variable} ${dunggeunmo.className}`}>
+        <Script src={API} strategy="beforeInteractive" />
         {children}
       </body>
     </html>
