@@ -19,7 +19,7 @@ export default function SectionTitle({
       </FadeIn>
       {description && (
         <FadeIn className="description" distance={30}>
-          <p className="mt-7 max-w-3xl whitespace-pre-wrap text-wrap text-center text-xl font-semibold text-white tablet:text-5xl">
+          <p className="mt-7 whitespace-pre-wrap text-wrap text-center text-3xl font-semibold text-white tablet:text-5xl">
             {description}
           </p>
         </FadeIn>
