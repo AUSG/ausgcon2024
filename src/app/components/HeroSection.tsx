@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
         </FadeIn>
         <FadeIn distance={60} duration={{ in: 0.8 }}>
-          <div className="font-bagel-fat-one flex flex-col items-center justify-center gap-2 whitespace-pre-wrap text-lg font-semibold text-primary tablet:flex-row tablet:gap-8 tablet:text-xl">
+          <div className="font-bagel-fat-one flex flex-col items-center justify-center gap-2 whitespace-pre-wrap text-xl font-semibold text-primary tablet:flex-row tablet:gap-8 tablet:text-3xl">
             <span className="flex items-center gap-2">
               <CalendarIcon className="h-6 w-6 shrink-0" />
               2024.09.21
