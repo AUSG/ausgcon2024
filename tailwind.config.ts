@@ -18,7 +18,7 @@ const config: Config = {
         tablet: "768px",
       },
       colors: {
-        primary: "#E03312",
+        primary: "#E94937",
       },
       backgroundColor: {
         scene: "#CDF6FF",
