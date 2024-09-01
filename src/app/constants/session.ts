@@ -8,6 +8,14 @@ export const sessionTimeLabelLookup: Record<number, string> = {
   7: "17:40 ~",
 };
 
+export const sessionTagColorLookup: Record<string, string> = {
+  Devops: "bg-blue-500/70",
+  AI: "bg-red-500/70",
+  Backend: "bg-green-500/70",
+  Frontend: "bg-yellow-500/70",
+  "커리어/경험": "bg-purple-500/70",
+};
+
 const track1 = {
   track: "트랙 1",
   sessions: [
@@ -23,6 +31,7 @@ const track1 = {
 파트리지시스템즈는 자율주행 데이터 분석 플랫폼을 자율주행 연구팀에 서비스를 하고 있으며, 차량 도메인은 보안에 대한 중요도가 굉장히 높고, 방대한 데이터가 실시간으로 수집됩니다. 따라서 Private한 자체 쿠버네티스 클러스터 구축이 필요했으며 폐쇄망으로 배포되어야 한다는 필수 보안 요구 조건이 있습니다.
 
 위 문제를 해결하기 위해 다양한 오픈소스와 자체 개발한 내용들을 바탕으로 어떻게 CI/CD를 구축했으며, Application 운영  안정성을 위한 LGTM 스택 기반의 모니터링 시스템을 구축하며 주어진 문제들을 어떻게 풀어나갔는지 발표하고자 합니다.`,
+      tags: ["Devops"],
       speaker: {
         name: "김창환",
         title: "파트리지시스템즈",
@@ -38,6 +47,7 @@ LLM으로 뭘 할 수 있나요?
 라는 궁금증에 대한 답변을 드리고 싶습니다.
 
 현재 뜨거운 감자인 LLM에 대한 개념, 활용법 그리고 한계점에 대해 공유합니다.`,
+      tags: ["AI"],
       speaker: {
         name: "김연수",
         title: "업스테이지",
@@ -50,6 +60,7 @@ LLM으로 뭘 할 수 있나요?
       title: "아무것도 모르던 코더가 살아남기",
       description: `개발을 아무것도 모르던 고졸 취업자에서 지금까지 엔지니어로 살아오면서 사소한 경험들 부터 다양한 개발이야기까지
 지금 돌아보면 아쉬운 것들을 솔직하게 공유 드리고 싶습니다~!`,
+      tags: ["Backend", "커리어/경험"],
       speaker: {
         name: "김민태",
         title: "우아한형제들",
@@ -61,6 +72,7 @@ LLM으로 뭘 할 수 있나요?
     {
       title: "나의 작은 Mimir",
       description: `멀티클러스터 모니터링 시스템 Mimir를 구축하면서 생긴 일이나 튜닝 포인트들 위주 발표입니다`,
+      tags: ["Devops"],
       speaker: {
         name: "정승호",
         title: "크래프톤",
@@ -77,6 +89,7 @@ LLM으로 뭘 할 수 있나요?
 위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
 다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
 여러분들에게 질문을 던지고 싶습니다.`,
+      tags: ["커리어/경험"],
       speaker: {
         name: "송주영",
         title: "LG UPLUS",
@@ -104,6 +117,7 @@ const track2 = {
       title: "gRPC와 함께 알아보는 같이 일하고 싶은 엔지니어",
       description: `이 발표는 두가지 이야기를 다룹니다.
 gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는 어떤 사람이었는지 기술에 대한 관점과 함께 이야기해봅니다.`,
+      tags: ["Backend", "커리어/경험"],
       speaker: {
         name: "김한수",
         title: "뱅크샐러드",
@@ -115,6 +129,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
     {
       title: "신입의 클라우드 엔지니어 적응기",
       description: `내가 바로 정지우다.`,
+      tags: ["Devops", "커리어/경험"],
       speaker: {
         name: "정지우",
         title: "여기어때컴퍼니",
@@ -127,6 +142,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
       title: "from ICN to NRT - 위피를 일본에 런칭하기까지.",
       description: `한국 시장에서 성공한 "위피"를 일본 시장에 새롭게 선보이기까지의 과정을 1인 백엔드 엔지니어의 시각에서 공유합니다. 
 기획과 설계 단계부터 구현 및 런칭까지, 단 한 명의 백엔드 엔지니어로서 겪었던 다양한 도전과 해결 과정을 이야기합니다.`,
+      tags: ["Backend"],
       speaker: {
         name: "변준석",
         title: "엔라이즈",
@@ -138,6 +154,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
     {
       title: "어디서도 보지 못한 GitHub Actions의 마법",
       description: `CI/CD 환경을 고도화하면서 겪은 이야기와 GitHub Actions를 이용한 여러 마술들을 소개드립니다.`,
+      tags: ["Devops"],
       speaker: {
         name: "김수빈",
         title: "당근",
@@ -154,6 +171,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
 위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
 다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
 여러분들에게 질문을 던지고 싶습니다.`,
+      tags: ["커리어/경험"],
       speaker: {
         name: "송주영",
         title: "LG UPLUS",
@@ -180,6 +198,7 @@ const track3 = {
     {
       title: "TBD",
       description: `첫 커리어로 AWS에 SA로 오기까지 고민하고 겪어온 것들, 그리고 1년 간 AWS에서 일하며 느낀 점과 커리어에 대한 생각을 캐주얼하게 이야기합니다.`,
+      tags: ["커리어/경험"],
       speaker: {
         name: "김윤서",
         title: "AWS",
@@ -193,6 +212,7 @@ const track3 = {
       description: `EC2로 Bastion host 구축, 그게 최선인가요?
 
 EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니다.`,
+      tags: ["Devops"],
       speaker: {
         name: "안지완",
         title: "몰로코",
@@ -213,6 +233,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
 그 어려움 그리고 시행착오를 공유하려 합니다.
 더불어, 디지털 노마드에 대한 이야기도 공유하고 싶습니다.
 마지막으로, 간단한 RAG의 개념과 AutoRAG를 많은 분들께 소개하고 싶습니다.`,
+      tags: ["AI"],
       speaker: {
         name: "김동규",
         title: "마커 AI",
@@ -228,6 +249,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
 (2) 자동화된 워크플로우 구축
 (3) 메타프로그래밍 
 (4) 인터페이스 향상성 등의 주요 인사이트들을 공유합니다.`,
+      tags: ["Frontend"],
       speaker: {
         name: "원지혁 (Tony)",
         title: "당근",
@@ -244,6 +266,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
 위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
 다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
 여러분들에게 질문을 던지고 싶습니다.`,
+      tags: ["커리어/경험"],
       speaker: {
         name: "송주영",
         title: "LG UPLUS",
