@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SectionTitle from "../SectionTitle";
-import SectionList from "./SectionList";
+import SectionList from "./SessionList";
 
 const container: Variants = {
   visible: {

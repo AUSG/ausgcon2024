@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { sessionList, sessionTimeLabelLookup } from "@/app/constants/session";
+import {
+  sessionList,
+  sessionTagColorLookup,
+  sessionTimeLabelLookup,
+} from "@/app/constants/session";
+import { cn } from "@/app/lib/utils";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import FadeIn from "../FadeIn";
@@ -48,18 +53,10 @@ export default function SectionList() {
                 <div>
                   {sessions.map((session) => (
                     <div key={session.order}>
-                      <span className="font-bagel-fat-one flex items-center gap-1 text-lg text-white/90 tablet:text-xl">
-                        <ClockIcon className="size-4 shrink-0 tablet:size-5" />
-                        {sessionTimeLabelLookup[session.order]}
-                      </span>
-                      <div
-                        className="relative rounded-md p-3 transition hover:bg-white/5"
-                        onClick={() => {
-                          setSelectedSession(session);
-                          setIsSessionDialogOpen(true);
-                        }}
-                      >
-                        <span className="flex items-center gap-1 text-xl font-semibold text-white tablet:text-2xl">
+                      <span className="flex flex-col items-start gap-1 text-lg text-white/90 tablet:flex-row tablet:text-xl">
+                        <div className="font-bagel-fat-one flex shrink-0 items-center gap-1">
+                          <ClockIcon className="size-4 shrink-0 tablet:size-5" />
+                          {sessionTimeLabelLookup[session.order]}
                           {session.speaker?.AUSG && (
                             <Image
                               className="aspect-square shrink-0"
@@ -69,6 +66,33 @@ export default function SectionList() {
                               height={16}
                             />
                           )}
+                        </div>
+                        <div className="flex gap-1">
+                          {session.tags &&
+                            session.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className={cn(
+                                  "shrink-0 px-2 py-px text-xs text-white tablet:text-sm/6",
+                                  tag.length <= 2
+                                    ? "rounded-xl"
+                                    : "rounded-full",
+                                  sessionTagColorLookup[tag]
+                                )}
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                        </div>
+                      </span>
+                      <div
+                        className="relative rounded-md p-3 transition hover:bg-white/5"
+                        onClick={() => {
+                          setSelectedSession(session);
+                          setIsSessionDialogOpen(true);
+                        }}
+                      >
+                        <span className="flex items-center gap-1 text-xl font-semibold text-white tablet:text-2xl">
                           {session.title}
                         </span>
                         {session.speaker && (
