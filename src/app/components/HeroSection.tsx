@@ -21,7 +21,7 @@ export default function HeroSection() {
 
   return (
     <motion.section
-      className="relative h-screen-dvh"
+      className="relative h-screen"
       ref={heroRef}
       animate={heroInView && mounted ? "visible" : "hidden"}
       variants={{
