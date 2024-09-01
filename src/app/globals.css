@@ -5,3 +5,12 @@
 .font-bagel-fat-one {
   font-family: var(--font-bagel-fat-one);
 }
+
+html,
+body,
+:root {
+  min-height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    min-height: -webkit-fill-available;
+  }
+}
