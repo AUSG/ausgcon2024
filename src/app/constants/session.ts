@@ -13,7 +13,7 @@ const track1 = {
   sessions: [
     {
       title: "오프닝",
-      description: "AUSGCON 2024",
+      description: "AUSG 8th Organizer 송승호",
       order: 1,
     },
     {
@@ -178,7 +178,7 @@ const track3 = {
       order: 1,
     },
     {
-      title: "(미정)",
+      title: "TBD",
       description: `첫 커리어로 AWS에 SA로 오기까지 고민하고 겪어온 것들, 그리고 1년 간 AWS에서 일하며 느낀 점과 커리어에 대한 생각을 캐주얼하게 이야기합니다.`,
       speaker: {
         name: "김윤서",
@@ -221,7 +221,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
       order: 4,
     },
     {
-      title: "(미정)",
+      title: "TBD",
       description: `당근 내에서 앱과 웹뷰 사이의 통신(브릿지)을 만들때 있었던 회고 포인트를 공유하고 현재 시점의 개선된 모습을 살펴보며 
 -- 
 (1) 인터페이스 설계와 
