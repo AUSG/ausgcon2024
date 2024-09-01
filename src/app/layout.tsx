@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Bagel_Fat_One } from "next/font/google";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const bagelFatOne = Bagel_Fat_One({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAOJSKEY}&libraries=services,clusterer&autoload=false`}
           strategy="beforeInteractive"
         />
+        <GoogleAnalytics gaId="G-47HSXJ1HKX" />
         {children}
       </body>
     </html>
