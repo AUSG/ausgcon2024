@@ -70,15 +70,8 @@ LLM으로 뭘 할 수 있나요?
       order: 4,
     },
     {
-      title: "나의 작은 Mimir",
-      description: `멀티클러스터 모니터링 시스템 Mimir를 구축하면서 생긴 일이나 튜닝 포인트들 위주 발표입니다`,
-      tags: ["Devops"],
-      speaker: {
-        name: "정승호",
-        title: "크래프톤",
-        image: "/session/avatar.png",
-        AUSG: true,
-      },
+      title: "TBD",
+      description: `TBD`,
       order: 5,
     },
     {
