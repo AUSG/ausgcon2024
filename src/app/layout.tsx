@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://2024.ausg.me",
     images: [
       {
-        url: "/og_image.png",
+        url: "/thumbnail.png",
         width: 1200,
         height: 600,
         alt: "AUSGCON 2024",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "대학생&주니어를 위한 IT 컨퍼런스! “AUSGCON”(아우쓱콘)을 소개합니다.",
     card: "summary_large_image",
     creator: "@FeConf",
-    images: [{ url: "/og_image.png" }],
+    images: [{ url: "/thumbnail.png" }],
   },
 };
 
