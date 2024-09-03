@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Button } from "@headlessui/react";
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import CTAButton from "./CTAButton";
 import FadeIn from "./FadeIn";
 
 export default function HeroSection() {
@@ -60,9 +60,7 @@ export default function HeroSection() {
           distance={80}
           duration={{ in: 0.8 }}
         >
-          <Button className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-6 py-3 text-xl/6 font-semibold text-white shadow-inner shadow-white/10 data-[hover]:bg-gray-600 tablet:px-9 tablet:py-6 tablet:text-4xl/6">
-            참가하기
-          </Button>
+          <CTAButton />
         </FadeIn>
       </div>
     </motion.section>
