@@ -189,7 +189,7 @@ const track3 = {
       order: 1,
     },
     {
-      title: "TBD",
+      title: "Solutions Architect를 아시나요?",
       description: `첫 커리어로 AWS에 SA로 오기까지 고민하고 겪어온 것들, 그리고 1년 간 AWS에서 일하며 느낀 점과 커리어에 대한 생각을 캐주얼하게 이야기합니다.`,
       tags: ["커리어/경험"],
       speaker: {
