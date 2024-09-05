@@ -51,7 +51,7 @@ LLM으로 뭘 할 수 있나요?
       speaker: {
         name: "김연수",
         title: "업스테이지",
-        image: "/session/avatar.png",
+        image: "/session/김연수.jpeg",
         AUSG: true,
       },
       order: 3,
@@ -64,7 +64,7 @@ LLM으로 뭘 할 수 있나요?
       speaker: {
         name: "김민태",
         title: "우아한형제들",
-        image: "/session/avatar.png",
+        image: "/session/김민태.jpg",
         AUSG: true,
       },
       order: 4,
@@ -114,7 +114,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
       speaker: {
         name: "김한수",
         title: "뱅크샐러드",
-        image: "/session/avatar.png",
+        image: "/session/김한수.png",
         AUSG: true,
       },
       order: 2,
@@ -126,7 +126,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
       speaker: {
         name: "정지우",
         title: "여기어때컴퍼니",
-        image: "/session/avatar.png",
+        image: "/session/정지우.jpg",
         AUSG: true,
       },
       order: 3,
@@ -139,7 +139,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
       speaker: {
         name: "변준석",
         title: "엔라이즈",
-        image: "/session/avatar.png",
+        image: "/session/변준석.jpg",
         AUSG: true,
       },
       order: 4,
@@ -151,7 +151,7 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
       speaker: {
         name: "김수빈",
         title: "당근",
-        image: "/session/avatar.png",
+        image: "/session/김수빈.png",
         AUSG: true,
       },
       order: 5,
@@ -195,7 +195,7 @@ const track3 = {
       speaker: {
         name: "김윤서",
         title: "AWS",
-        image: "/session/avatar.png",
+        image: "/session/김윤서.jpeg",
         AUSG: true,
       },
       order: 2,
@@ -209,7 +209,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
       speaker: {
         name: "안지완",
         title: "몰로코",
-        image: "/session/avatar.png",
+        image: "/session/안지완.png",
         AUSG: true,
       },
       order: 3,
@@ -230,7 +230,7 @@ EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니�
       speaker: {
         name: "김동규",
         title: "마커 AI",
-        image: "/session/avatar.png",
+        image: "/session/김동규.jpg",
       },
       order: 4,
     },

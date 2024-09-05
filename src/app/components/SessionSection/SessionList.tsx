@@ -99,7 +99,7 @@ export default function SectionList() {
                           <div className="flex gap-2" aria-hidden="true">
                             <div className="relative size-6 shrink-0">
                               <Image
-                                className="aspect-square shrink-0 rounded-full"
+                                className="aspect-square shrink-0 rounded-full object-cover"
                                 src={session.speaker.image}
                                 alt={session.speaker.name}
                                 fill

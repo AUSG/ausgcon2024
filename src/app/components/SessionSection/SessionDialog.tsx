@@ -46,7 +46,7 @@ export default function SessionDialog({
                   alt={session.speaker.name}
                   width={40}
                   height={40}
-                  className="rounded-full"
+                  className="aspect-square rounded-full object-cover"
                 />
                 <div>
                   <p className="text-sm/6 text-white/80">
