@@ -35,7 +35,7 @@ const track1 = {
       speaker: {
         name: "김창환",
         title: "파트리지시스템즈",
-        image: "/session/avatar.png",
+        image: "/session/김창환.jpeg",
       },
       order: 2,
     },
@@ -202,9 +202,8 @@ const track3 = {
     },
     {
       title: "EC2로 Bastion host 구축, 그게 최선인가요?",
-      description: `EC2로 Bastion host 구축, 그게 최선인가요?
-
-EC2로 Bastion host를 구축하면서 겪은 경험과 고민을 공유합니다.`,
+      description: `기존의 EC2로 Bastion Host를 구축하는 방식에서 직면한 문제를 해결하기 위해, 새로운 접근법으로 Bastion Host를 구축한 과정과 그 경험을 공유합니다. 
+이와 더불어, 보안과 편의의 균형을 찾는 고민에 대해서도 이야기를 나눠보려 합니다.`,
       tags: ["Devops"],
       speaker: {
         name: "안지완",
