@@ -1,5 +1,10 @@
 export const sponsorList = [
   {
+    name: "AWS",
+    image: "/sponsor/aws.png",
+    url: "https://aws.amazon.com/ko/",
+  },
+  {
     name: "AWSKRUG",
     image: "/sponsor/awskrug.png",
     url: "https://awskrug.github.io",
