@@ -26,7 +26,7 @@ export default function SponsorSection() {
       animate={inView ? "visible" : "hidden"}
       variants={container}
     >
-      <div className="container m-auto flex flex-col items-center py-44">
+      <div className="container m-auto flex flex-col items-center pt-44">
         <SectionTitle
           title="Sponsor"
           description={`AUSGCON을 후원해주신\n기업을 소개합니다`}

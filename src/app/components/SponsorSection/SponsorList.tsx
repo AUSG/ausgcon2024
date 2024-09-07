@@ -7,24 +7,22 @@ import FadeIn from "../FadeIn";
 
 export default function FAQList() {
   return (
-    <FadeIn className="flex w-full justify-center px-4 pt-10">
-      <div className="grid w-full grid-cols-1 gap-8 tablet:grid-cols-2">
-        {sponsorList.map((sponsor) => (
-          <Link
-            key={sponsor.name}
-            href={sponsor.url}
-            target="_blank"
-            className="relative flex h-20 items-center justify-center rounded-xl bg-white/20 transition-colors hover:bg-white/30"
-          >
-            <Image
-              src={sponsor.image}
-              alt={sponsor.name}
-              fill
-              className="object-contain p-5"
-            />
-          </Link>
-        ))}
-      </div>
+    <FadeIn className="flex w-full flex-col items-center justify-center gap-8 pt-10">
+      {sponsorList.map((sponsor) => (
+        <Link
+          key={sponsor.name}
+          href={sponsor.url}
+          target="_blank"
+          className="relative flex aspect-auto h-28 w-48 items-center justify-center rounded-xl transition-transform tablet:h-32 tablet:w-60 tablet:hover:scale-105"
+        >
+          <Image
+            src={sponsor.image}
+            alt={sponsor.name}
+            fill
+            className="object-contain"
+          />
+        </Link>
+      ))}
     </FadeIn>
   );
 }
