@@ -1,29 +1,89 @@
 export const sessionTimeLabelLookup: Record<number, string> = {
-  1: "13:00 ~ 13:40",
-  2: "13:40 ~ 14:20",
-  3: "14:35 ~ 14:55",
-  4: "15:30 ~ 16:10",
-  5: "16:25 ~ 16:45",
-  6: "17:00 ~ 17:40",
-  7: "17:40 ~",
+  1: "13:00 ~ 13:20",
+  2: "13:30 ~ 13:50",
+  3: "14:05 ~ 14:45",
+  4: "15:00 ~ 15:20",
+  5: "15:50 ~ 16:30",
+  6: "16:45 ~ 17:05",
+  7: "17:20 ~ 18:00",
+  8: "18:00 ~",
 };
 
 export const sessionTagColorLookup: Record<string, string> = {
+  "AWS Community Hero": "bg-yellow-500/70",
+  "AWS Container Hero": "bg-yellow-500/70",
   Devops: "bg-blue-500/70",
   AI: "bg-red-500/70",
   Backend: "bg-green-500/70",
-  Frontend: "bg-yellow-500/70",
+  Frontend: "bg-orange-500/70",
   "커리어/경험": "bg-purple-500/70",
+};
+
+interface Speaker {
+  name: string;
+  title: string;
+  image: string;
+}
+
+interface Session {
+  title: string;
+  description: string;
+  tags?: string[];
+  speaker?: Speaker;
+  isAUSG?: boolean;
+  order: number;
+}
+
+const opening: Session = {
+  title: "오프닝",
+  description: "AUSGCON 2024",
+  order: 1,
+};
+
+const keynote: Session = {
+  title: "커뮤니티 활동을 하라, 그럼 당신에게 드넓은 기회가 펼쳐질 것이니",
+  description: `- 사수 없이도 개발 실력을 키울 수 있었던 비결인 커뮤니티 활용법을 전파하려 합니다.
+- 커뮤니티는 운영자 참가자가 모두 함께 만들어 나가는 것임을 알려드리고자 합니다.
+- 커뮤니티 활동을 통해 저에게 주어졌던 기회와 경험들을 말씀드리려고 합니다.
+- 이 발표를 들으시는 여러분들의 열린 마인드가 이러한 귀중한 기회와 경험을 할 수 있게 해 준다는 것을 알려드리고자 합니다.
+`,
+  tags: ["AWS Community Hero", "커리어/경험"],
+  speaker: {
+    name: "박태성",
+    title: "아이디어샘",
+    image: "/session/박태성.jpeg",
+  },
+  order: 2,
+};
+
+const closing: Session = {
+  title: "Hey, Jina",
+  description: `어떤 한 지식을 공유하기보다, 제가 직접 겪은 소중한 경험들을 공유하려고 합니다.
+우리는 무엇을 만들어야 할까요?
+소프트웨어를 개발할때 어떤 마음가짐을 가져야 할까요?
+위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
+다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
+여러분들에게 질문을 던지고 싶습니다.`,
+  tags: ["AWS Container Hero", "커리어/경험"],
+  speaker: {
+    name: "송주영",
+    title: "LG UPLUS",
+    image: "/session/avatar.png",
+  },
+  order: 7,
+};
+
+const event: Session = {
+  title: "이벤트",
+  description: "AUSGCON 2024",
+  order: 8,
 };
 
 const track1 = {
   track: "트랙 1",
   sessions: [
-    {
-      title: "오프닝",
-      description: "AUSG 8th Organizer 송승호",
-      order: 1,
-    },
+    opening,
+    keynote,
     {
       title: "Private 환경에서 Kubernetes를 활용한 자율주행 PaaS 구축기",
       description: `발표 내용은 Docker 기반 플랫폼에서 Kubernetes Cluster 환경으로의 전환 이야기를 다루고자 합니다. 과정에서 발생한 문제와 고민을 소개하고 이를 어떻게 해결 했으며, 앞으로 남은 과제를 소개하고자 합니다.
@@ -37,7 +97,7 @@ const track1 = {
         title: "파트리지시스템즈",
         image: "/session/김창환.jpeg",
       },
-      order: 2,
+      order: 3,
     },
     {
       title: "LLM은 스캠인가",
@@ -52,9 +112,9 @@ LLM으로 뭘 할 수 있나요?
         name: "김연수",
         title: "업스테이지",
         image: "/session/김연수.jpeg",
-        AUSG: true,
       },
-      order: 3,
+      isAUSG: true,
+      order: 4,
     },
     {
       title: "아무것도 모르던 코더가 살아남기",
@@ -65,47 +125,25 @@ LLM으로 뭘 할 수 있나요?
         name: "김민태",
         title: "우아한형제들",
         image: "/session/김민태.jpg",
-        AUSG: true,
       },
-      order: 4,
+      isAUSG: true,
+      order: 5,
     },
     {
       title: "TBD",
       description: `TBD`,
-      order: 5,
-    },
-    {
-      title: "Hey, Jina",
-      description: `어떤 한 지식을 공유하기보다, 제가 직접 겪은 소중한 경험들을 공유하려고 합니다.
-우리는 무엇을 만들어야 할까요?
-소프트웨어를 개발할때 어떤 마음가짐을 가져야 할까요?
-위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
-다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
-여러분들에게 질문을 던지고 싶습니다.`,
-      tags: ["커리어/경험"],
-      speaker: {
-        name: "송주영",
-        title: "LG UPLUS",
-        image: "/session/avatar.png",
-      },
       order: 6,
     },
-    {
-      title: "이벤트",
-      description: "AUSGCON 2024",
-      order: 7,
-    },
+    closing,
+    event,
   ],
 };
 
 const track2 = {
   track: "트랙 2",
   sessions: [
-    {
-      title: "오프닝",
-      description: "AUSGCON 2024",
-      order: 1,
-    },
+    opening,
+    keynote,
     {
       title: "gRPC와 함께 알아보는 같이 일하고 싶은 엔지니어",
       description: `이 발표는 두가지 이야기를 다룹니다.
@@ -115,9 +153,9 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
         name: "김한수",
         title: "뱅크샐러드",
         image: "/session/김한수.png",
-        AUSG: true,
       },
-      order: 2,
+      isAUSG: true,
+      order: 3,
     },
     {
       title: "신입의 클라우드 엔지니어 적응기",
@@ -127,22 +165,22 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
         name: "정지우",
         title: "여기어때컴퍼니",
         image: "/session/정지우.jpg",
-        AUSG: true,
       },
-      order: 3,
+      isAUSG: true,
+      order: 4,
     },
     {
       title: "from ICN to NRT - 위피를 일본에 런칭하기까지.",
       description: `한국 시장에서 성공한 "위피"를 일본 시장에 새롭게 선보이기까지의 과정을 1인 백엔드 엔지니어의 시각에서 공유합니다. 
-기획과 설계 단계부터 구현 및 런칭까지, 단 한 명의 백엔드 엔지니어로서 겪었던 다양한 도전과 해결 과정을 이야기합니다.`,
+기획과 설계 단계부터 구현 및 런칭까지, 단 한 ���의 백엔드 엔지니어로서 겪었던 다양한 도전과 해결 과정을 이야기합니다.`,
       tags: ["Backend"],
       speaker: {
         name: "변준석",
         title: "엔라이즈",
         image: "/session/변준석.jpg",
-        AUSG: true,
       },
-      order: 4,
+      isAUSG: true,
+      order: 5,
     },
     {
       title: "어디서도 보지 못한 GitHub Actions의 마법",
@@ -152,42 +190,20 @@ gRPC에 대해 먼저 이야기하고 함께 일하고 싶었던 엔지니어는
         name: "김수빈",
         title: "당근",
         image: "/session/김수빈.png",
-        AUSG: true,
       },
-      order: 5,
-    },
-    {
-      title: "Hey, Jina",
-      description: `어떤 한 지식을 공유하기보다, 제가 직접 겪은 소중한 경험들을 공유하려고 합니다.
-우리는 무엇을 만들어야 할까요?
-소프트웨어를 개발할때 어떤 마음가짐을 가져야 할까요?
-위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
-다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
-여러분들에게 질문을 던지고 싶습니다.`,
-      tags: ["커리어/경험"],
-      speaker: {
-        name: "송주영",
-        title: "LG UPLUS",
-        image: "/session/avatar.png",
-      },
+      isAUSG: true,
       order: 6,
     },
-    {
-      title: "이벤트",
-      description: "AUSGCON 2024",
-      order: 7,
-    },
+    closing,
+    event,
   ],
 };
 
 const track3 = {
   track: "트랙 3",
   sessions: [
-    {
-      title: "오프닝",
-      description: "AUSGCON 2024",
-      order: 1,
-    },
+    opening,
+    keynote,
     {
       title: "Solutions Architect를 아시나요?",
       description: `첫 커리어로 AWS에 SA로 오기까지 고민하고 겪어온 것들, 그리고 1년 간 AWS에서 일하며 느낀 점과 커리어에 대한 생각을 캐주얼하게 이야기합니다.`,
@@ -196,9 +212,9 @@ const track3 = {
         name: "김윤서",
         title: "AWS",
         image: "/session/김윤서.jpeg",
-        AUSG: true,
       },
-      order: 2,
+      isAUSG: true,
+      order: 3,
     },
     {
       title: "EC2로 Bastion host 구축, 그게 최선인가요?",
@@ -209,9 +225,9 @@ const track3 = {
         name: "안지완",
         title: "몰로코",
         image: "/session/안지완.png",
-        AUSG: true,
       },
-      order: 3,
+      isAUSG: true,
+      order: 4,
     },
     {
       title: "휴학, 디지털 노마드, AI, 그리고 깃허브 스타 1.3k",
@@ -231,10 +247,10 @@ const track3 = {
         title: "마커 AI",
         image: "/session/김동규.jpg",
       },
-      order: 4,
+      order: 5,
     },
     {
-      title: "TBD",
+      title: "인터페이스 설계와 메타프로그래밍 맛보기",
       description: `당근 내에서 앱과 웹뷰 사이의 통신(브릿지)을 만들때 있었던 회고 포인트를 공유하고 현재 시점의 개선된 모습을 살펴보며 
 -- 
 (1) 인터페이스 설계와 
@@ -245,32 +261,13 @@ const track3 = {
       speaker: {
         name: "원지혁 (Tony)",
         title: "당근",
-        image: "/session/avatar.png",
-        AUSG: true,
+        image: "/session/원지혁.jpg",
       },
-      order: 5,
-    },
-    {
-      title: "Hey, Jina",
-      description: `어떤 한 지식을 공유하기보다, 제가 직접 겪은 소중한 경험들을 공유하려고 합니다.
-우리는 무엇을 만들어야 할까요?
-소프트웨어를 개발할때 어떤 마음가짐을 가져야 할까요?
-위와 같은 질문에 스스로 답을 해볼때 여러분들은 어떤 답을 할건가요?
-다양한 사례와 그 중 Jina와 연관지어 우리는 어떤 엔지니어가 되어야할지
-여러분들에게 질문을 던지고 싶습니다.`,
-      tags: ["커리어/경험"],
-      speaker: {
-        name: "송주영",
-        title: "LG UPLUS",
-        image: "/session/avatar.png",
-      },
+      isAUSG: true,
       order: 6,
     },
-    {
-      title: "이벤트",
-      description: "AUSGCON 2024",
-      order: 7,
-    },
+    closing,
+    event,
   ],
 };
 

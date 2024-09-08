@@ -57,7 +57,7 @@ export default function SectionList() {
                         <div className="font-bagel-fat-one flex shrink-0 items-center gap-1">
                           <ClockIcon className="size-4 shrink-0 tablet:size-5" />
                           {sessionTimeLabelLookup[session.order]}
-                          {session.speaker?.AUSG && (
+                          {session.isAUSG && (
                             <Image
                               className="aspect-square shrink-0"
                               src="/session/ausg_badge.png"
