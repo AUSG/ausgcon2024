@@ -17,7 +17,11 @@ export default function CTAButton() {
     const today = Date.now();
     if (today < TICKET_OPEN_TIMESTAMP) {
       return "before";
-    } else if (today < EVENT_END_TIMESTAMP && today > TICKET_OPEN_TIMESTAMP) {
+    } else if (
+      today < EVENT_END_TIMESTAMP &&
+      today > TICKET_OPEN_TIMESTAMP &&
+      process.env.NEXT_PUBLIC_TICKET_SOLDOUT !== "true"
+    ) {
       return "sale";
     } else if (
       today < EVENT_END_TIMESTAMP &&
