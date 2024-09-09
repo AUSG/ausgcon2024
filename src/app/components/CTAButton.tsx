@@ -19,7 +19,10 @@ export default function CTAButton() {
       return "before";
     } else if (today < EVENT_END_TIMESTAMP && today > TICKET_OPEN_TIMESTAMP) {
       return "sale";
-    } else if (process.env.NEXT_PUBLIC_TICKET_SOLDOUT) {
+    } else if (
+      today < EVENT_END_TIMESTAMP &&
+      process.env.NEXT_PUBLIC_TICKET_SOLDOUT === "true"
+    ) {
       return "soldout";
     } else {
       return "end";
