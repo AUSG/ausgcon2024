@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SectionTitle from "../SectionTitle";
-import FAQList from "./FAQList";
+import Contact from "./Contact";
 
 const container: Variants = {
   visible: {
@@ -14,7 +14,7 @@ const container: Variants = {
   },
 };
 
-export default function FAQSection() {
+export default function ContactSection() {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
@@ -26,9 +26,12 @@ export default function FAQSection() {
       animate={inView ? "visible" : "hidden"}
       variants={container}
     >
-      <div className="container m-auto flex flex-col items-center px-5 pb-44">
-        <SectionTitle title="FAQ" description={`자주 묻는 질문을 모았습니다`} />
-        <FAQList />
+      <div className="container m-auto flex flex-col items-center px-5 pb-16">
+        <SectionTitle
+          title="Contact"
+          description={`궁금한게 있다면 언제든지 질문 받습니다`}
+        />
+        <Contact />
       </div>
     </motion.section>
   );

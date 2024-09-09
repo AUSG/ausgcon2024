@@ -1,5 +1,6 @@
 import Backdrop from "./components/Backdrop";
 import Background from "./components/Background";
+import ContactSection from "./components/ContactSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -16,6 +17,7 @@ export default function Home() {
         <SponsorSection />
         <MapSection />
         <FAQSection />
+        <ContactSection />
         <Background />
         <Footer />
       </Backdrop>
