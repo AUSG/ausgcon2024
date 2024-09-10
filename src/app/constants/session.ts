@@ -130,8 +130,15 @@ LLM으로 뭘 할 수 있나요?
       order: 5,
     },
     {
-      title: "TBD",
-      description: `TBD`,
+      title: "Nanoservice with V8-isolate",
+      description: `V8엔진의 Feature 중 하나인 V8-isolate이 무엇인지 알아보고, 이를 기반으로 구현된 "Nanoservice"를 간략히...간략히 짚어보며 생각을 확장합니다.`,
+      tags: ["Software Engineering"],
+      speaker: {
+        name: "오형근",
+        title: "고려대학교",
+        image: "https://media.licdn.com/dms/image/v2/D5603AQFZkdYXg6wG4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1721540246687?e=1731542400&v=beta&t=3dQ2ZqmpFZU2RRN6D5XdQH1vGt2nbYRwG3iIDT1EaIk"
+      },
+      isAUSG: true,
       order: 6,
     },
     closing,
