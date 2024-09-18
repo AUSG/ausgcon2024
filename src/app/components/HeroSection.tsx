@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CTAButton from "./CTAButton";
 import FadeIn from "./FadeIn";
+import NetworkButton from "./NetworkButton";
 
 export default function HeroSection() {
   const { ref: heroRef, inView: heroInView } = useInView({
@@ -56,11 +57,12 @@ export default function HeroSection() {
           </div>
         </FadeIn>
         <FadeIn
-          className="w-full text-center"
+          className="flex w-full items-center justify-center gap-2 text-center"
           distance={80}
           duration={{ in: 0.8 }}
         >
           <CTAButton />
+          <NetworkButton />
         </FadeIn>
       </div>
     </motion.section>
