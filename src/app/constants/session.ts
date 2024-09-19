@@ -68,7 +68,7 @@ const closing: Session = {
   speaker: {
     name: "송주영",
     title: "LG UPLUS",
-    image: "/session/avatar.png",
+    image: "/session/송주영.jpeg",
   },
   order: 7,
 };
